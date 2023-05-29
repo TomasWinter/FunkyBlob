@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Textures\BlueArrow.png" />
+    <None Remove="Textures\GreenArrow.png" />
+    <None Remove="Textures\PurpleArrow.png" />
+    <None Remove="Textures\RedArrow.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Textures\BlueArrow.png" />
+    <Resource Include="Textures\GreenArrow.png" />
+    <Resource Include="Textures\PurpleArrow.png" />
+    <Resource Include="Textures\RedArrow.png" />
+  </ItemGroup>
+
+</Project>
