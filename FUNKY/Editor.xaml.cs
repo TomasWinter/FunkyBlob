@@ -18,9 +18,6 @@ using System.Windows.Threading;
 
 namespace FUNKY
 {
-    /// <summary>
-    /// Interakční logika pro Editor.xaml
-    /// </summary>
     public partial class Editor : Window
     {
         BrushConverter BConv = new System.Windows.Media.BrushConverter();
@@ -121,13 +118,13 @@ namespace FUNKY
         {
             TimeSlider.Value--;
         }
-        public void Save(object sender, RoutedEventArgs e) // Funkce pro uložení do textového souboru
+        public void Save(object sender, RoutedEventArgs e) // uložení do textového souboru
         {
             // Kontrola, zda nechybí žádné údaje
             if (!string.IsNullOrWhiteSpace(SongNameBox.Text) && !string.IsNullOrWhiteSpace(SongUriBox.Text))
             {
                 // Kontrola, zda jméno je originální
-                if (!File.Exists("../../../SaveFiles/" + CurrentRap.RapName + ".txt") || MessageBox.Show("A song with the same name was found!\nDo you want to delete it?\n!NOT DELETING IT WON'T SAVE THIS FILE!","DELETE FILE",MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                if (!File.Exists("../../../SaveFiles/" + SongNameBox.Text + ".txt") || MessageBox.Show("A song with the same name was found!\nDo you want to delete it?\n!NOT DELETING IT WON'T SAVE THIS FILE!","DELETE FILE",MessageBoxButton.YesNo,MessageBoxImage.Error) == MessageBoxResult.Yes)
                 {
                     if (CurrentRap.RapName != SongNameBox.Text && File.Exists("../../../SaveFiles/" + CurrentRap.RapName + ".txt")) // Zeptat se na smazání starého souboru, pokud byl nový soubor přejmenován
                     {

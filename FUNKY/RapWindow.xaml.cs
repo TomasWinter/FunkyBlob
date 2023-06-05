@@ -19,8 +19,8 @@ namespace FUNKY
     public partial class RapWindow : Window
     {
         Rap CurrentRap;
-        List<string> Pochvaly = new List<string>() { "NICE","SICK","MEGA","COOL"};
-        List<string> Urazky = new List<string>() { "NOT GOOD", "MISS", "BAD", "UNCOOL" };
+        List<string> Pochvaly = new List<string>() { "NICE", "SICK" ,"MEGA","COOL","B)","100%","MASTER"};
+        List<string> FailMsgs = new List<string>() { "NOT GOOD", "MISS", "BAD", "UNCOOL", "OOPSIE" ,":("};
         MediaPlayer PlayerOfMedia = new MediaPlayer();
         MediaPlayer PlayerOfFail = new MediaPlayer();
         List<List<int>> ArrowTimeData = new List<List<int>>();
@@ -95,7 +95,7 @@ namespace FUNKY
                         MainGrid.Children.Remove(CurrentObject);
                         CurrentList.Remove(CurrentObject);
                         ScoreLabel.Content = "SCORE: " + CurrentScore + "/" + MaxScore;
-                        PochvalaLabel.Content = Urazky[new Random().Next(Urazky.Count - 1)];
+                        PochvalaLabel.Content = FailMsgs[new Random().Next(FailMsgs.Count)];
                         ChangeText();
                     }
                 }
@@ -146,12 +146,12 @@ namespace FUNKY
             {
                 CurrentScore--;
                 FailSound();
-                PochvalaLabel.Content = Urazky[new Random().Next(Urazky.Count - 1)]; // Změna oznamovacího textu
+                PochvalaLabel.Content = FailMsgs[new Random().Next(FailMsgs.Count)]; // Změna oznamovacího textu
                 ChangeText();
             }
             else
             {
-                PochvalaLabel.Content = Pochvaly[new Random().Next(Pochvaly.Count-1)]; // Změna oznamovacího textu
+                PochvalaLabel.Content = Pochvaly[new Random().Next(Pochvaly.Count)]; // Změna oznamovacího textu
                 ChangeText();
             }
             ScoreLabel.Content = "SCORE: " + CurrentScore + "/" + MaxScore;

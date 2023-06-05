@@ -18,9 +18,6 @@ using System.Windows.Shapes;
 
 namespace FUNKY
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         List<Rap> RapList = new List<Rap>();
@@ -93,3 +90,4 @@ namespace FUNKY
         }
     }
 }
+// McBlob was here

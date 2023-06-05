@@ -17,6 +17,6 @@
         <Image x:Name="Right1Arrow" Margin="612,10,99,335" Source="/Textures/GreenArrow.png" OpacityMask="#7FFFFFFF"/>
         <Label x:Name="ScoreLabel" Content="SCORE: 0" HorizontalAlignment="Left" Margin="10,342,0,0" VerticalAlignment="Top" Height="69" Width="432" Foreground="White" FontSize="48" FontFamily="Cascadia Code"/>
         <Label x:Name="TimeLabel" Content="0" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="67" Width="321" Foreground="White" FontSize="20" FontFamily="Cascadia Code"/>
-        <Label x:Name="PochvalaLabel" Margin="20,257,358,97" Foreground="White" FontSize="48" HorizontalContentAlignment="Center" FontFamily="Cascadia Code"/>
+        <Label x:Name="PochvalaLabel" Margin="20,255,358,97" Foreground="White" FontSize="48" HorizontalContentAlignment="Center" FontFamily="Cascadia Code"/>
     </Grid>
 </Window>
